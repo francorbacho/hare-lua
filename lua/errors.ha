@@ -29,3 +29,11 @@ export fn wrapvoid(res: int) (void | error) = {
     case => return errunknown;
     };
 };
+
+export fn strerror(error: error) str = match (error) {
+    case errrun => return "errrun";
+    case errsyntax => return "errsyntax";
+    case errmemory => return "errmem";
+    case errgcmm => return "errgcmm";
+    case errerr => return "errerr";
+};
