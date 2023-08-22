@@ -1,4 +1,4 @@
-LIBS := $(shell pkg-config --libs lua)
+LIBS := $(shell pkg-config --libs lua5.4)
 
 demo:
 	hare build $(LIBS) cmd/demo
