@@ -2,7 +2,7 @@ use types::c;
 use types::c::{ char };
 
 export type lua_State = void;
-export type lua_CFunction = nullable *void;
+export type lua_CFunction = nullable *fn(l: *lua_State) void;
 export type harefunc = fn(l: *lua_State) void;
 
 export @symbol("luaL_newstate") fn luaL_newstate() *lua_State;

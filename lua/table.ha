@@ -16,7 +16,7 @@ export fn reg(name: str, func: *harefunc) luaL_Reg = {
 
     return luaL_Reg {
         name = cstr,
-        func = func,
+        func = func: lua_CFunction,
     };
 };
 
